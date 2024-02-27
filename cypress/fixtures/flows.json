@@ -1,0 +1,4 @@
+{
+  "allFlows": "**/*",
+  "authenticationFlow": "authenticationFlow"
+}
