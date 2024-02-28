@@ -6,7 +6,7 @@ const runMode = `--${process.argv[4]}`;
 const env = "";
 
 exec(
-  `npx cypress run --env flowName=${flowName}Flow --browser ${browser} ${runMode} ${env}`,
+  `npx cypress run --env flowName=${flowName} --browser ${browser} ${runMode} ${env}`,
   (error, stdout, stderr) => {
     if (error) {
       console.error(`Error executing command: ${error}`);
