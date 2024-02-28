@@ -4,21 +4,26 @@ const {
   Then,
 } = require(`@badeball/cypress-cucumber-preprocessor`);
 
-const authenticationPageActions = require(`@main/authenticationPage/actions/authentication.actions`);
+const homePageTasks = require(`../main/UI/homePage/tasks/homePage.tasks`);
+const homePageAssertions = require("../main/UI/homePage/assertions/homePage.assertions");
 
 Given("User navigates to automation excercise website", function () {
   cy.visit("/");
 });
 
-Then("Verify that home page is visible successfully", () => {});
+Then("Verify that home page is visible successfully", function () {
+  homePageAssertions.verifyHomePageIsAppearing();
+});
 
-Given("User navigates to sign up page", () => {});
+Given("User navigates to sign up page", function () {
+  homePageTasks.userNavigatesToAuthenticationPage();
+});
 
-Then("Verify signup page is visible successfully", () => {});
+Then("Verify signup page is visible successfully", function () {});
 
 When(
   "User fills the registration form with valid details and clicks signup",
-  () => {}
+  function () {}
 );
 
-Then("Verify user is registered successfully", () => {});
+Then("Verify user is registered successfully", function () {});
