@@ -15,9 +15,9 @@ module.exports = defineConfig({
   screenshotsFolder: "cypress/screenshots",
   videosFolder: "cypress/reports/videos",
   video: true,
-  // viewportWidth: 1280, // depend upon your requirement
-  // viewportHeight: 1000, // depend upon your requirement
-  // defaultCommandTimeout: 90000,
+  viewportWidth: 1280, // depend upon your requirement
+  viewportHeight: 1000, // depend upon your requirement
+  defaultCommandTimeout: 90000,
   execTimeout: 100000,
   pageLoadTimeout: 100000,
   taskTimeout: 100000,
@@ -43,7 +43,7 @@ module.exports = defineConfig({
       );
       config.specPattern = `cypress/e2e/features/${
         flowPaths[config.env.flowName]
-      }Flow.feature`;
+      }.feature`;
       config = dotenvPlugin(config);
       return config;
     },
