@@ -1,0 +1,12 @@
+{
+  "credentials": {
+    "correct": {
+      "name": "testerName",
+      "email": "testerEmail@email.com"
+    },
+    "wrong": {
+      "name": "wrongName",
+      "email": "wrongEmail@email.com"
+    }
+  }
+}
