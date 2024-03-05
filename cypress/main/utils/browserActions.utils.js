@@ -25,19 +25,19 @@ function click(selector, elementName) {
   }
 }
 
-function getElementText(selector, elementName) {
+async function getElementText(selector, elementName) {
   waitForDisplayed(selector, elementName);
   return cy.get(selector).invoke("text");
 }
 
-async function getElementsLength(selector) {
-  cy.get(selector).first().scrollIntoView();
-  return cy
-    .get(selector)
-    .its("length")
-    .then((length) => {
-      return length;
-    });
+async function getUrl() {
+  return cy.url().then((url) => {
+    return url;
+  });
+}
+
+function getElementsLength(selector) {
+  return cy.getLength(selector);
 }
 
 function getElementTextArray(selector, elementArrayName) {
@@ -54,10 +54,34 @@ function getElementTextArray(selector, elementArrayName) {
   return textArray;
 }
 
+function enterValue(selector, value) {
+  click(selector, selector);
+  cy.get(selector).type(value);
+}
+
+function checkOption(selector, value) {
+  if (value) cy.get(selector).check(value);
+  else cy.get(selector).check();
+}
+
+function selectOptionFromDropdown(selector, optionText) {
+  // cy.get(selector).click();
+  cy.get(selector + " option")
+    .contains(optionText)
+    .then((option) => {
+      cy.get(selector).select(option.text());
+    });
+  // cy.select()
+}
+
 module.exports = {
   click,
   waitForDisplayed,
   getElementText,
   getElementTextArray,
   getElementsLength,
+  getUrl,
+  enterValue,
+  checkOption,
+  selectOptionFromDropdown,
 };
