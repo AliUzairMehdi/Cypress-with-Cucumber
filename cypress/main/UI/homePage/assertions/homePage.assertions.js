@@ -1,22 +1,17 @@
 const homePageSelectors = require("../selectors/homePage.selectors");
-const browserActions = require("../../../utils/browserActions.utils");
 const browserAssertions = require("../../../utils/browserAssertions.utils");
-const waits = require("../../../../fixtures/waits.json");
+const assertion = require("../../../../fixtures/assertionData.json");
 
-async function verifyHomePageIsAppearing() {
-  try {
-    let numberOfElements = await browserActions.getElementsLength(
-      homePageSelectors.getHomePageSlider
-    );
-    let status = numberOfElements > 0 ? true : false;
-    browserAssertions.verifyElementIsExisting(
-      status,
-      `Home Page is not appearing`
-    );
-  } catch (error) {
-    console.error(error);
-    throw error;
-  }
+function verifyHomePageIsAppearing(isLast = false) {
+  browserAssertions.verifyPageIsOpened(
+    assertion.urls.homePage,
+    assertion.errorMessages.pages.homePage
+  );
+  browserAssertions.verifyElementIsExisting(
+    homePageSelectors.getHomePageSlider,
+    assertion.errorMessages.elements.homePageSlider,
+    isLast
+  );
 }
 
 module.exports = {
