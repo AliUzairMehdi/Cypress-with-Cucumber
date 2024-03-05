@@ -8,5 +8,22 @@
       "name": "wrongName",
       "email": "wrongEmail@email.com"
     }
+  },
+  "user": {
+    "gender": "Male",
+    "firstName": "testerFirstName",
+    "lastName": "testerLastName",
+    "dateOfBirth": {
+      "day": 1,
+      "month": "January",
+      "year": 2000
+    },
+    "password": "p@ssword@123",
+    "address": "Street UVW city XYZ",
+    "state": "randomState",
+    "city": "randomCity",
+    "country": "United States",
+    "zipcode": "000000",
+    "phone": "01234567890"
   }
 }
