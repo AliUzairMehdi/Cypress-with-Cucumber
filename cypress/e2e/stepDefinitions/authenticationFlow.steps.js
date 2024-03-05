@@ -8,7 +8,7 @@ const homePageTasks = require(`../../main/UI/homePage/tasks/homePage.tasks`);
 const homePageAssertions = require("../../main/UI/homePage/assertions/homePage.assertions");
 const authenticationPageAssertions = require(`../../main/UI/authenticationPage/assertions/authenticationFlow.assertions`);
 const authenticationPageTasks = require("../../main/UI/authenticationPage/tasks/authentication.tasks");
-const signUpPageTasks = require("../../main/UI/userDetails/tasks/userDetails.tasks");
+const signUpPageTasks = require("../../main/UI/signUpPage/tasks/signUpPage.tasks");
 
 Given("User navigates to automation excercise website", function () {
   cy.visit("/");
