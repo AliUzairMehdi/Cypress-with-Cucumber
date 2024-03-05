@@ -1,0 +1,17 @@
+{
+  "urls": {
+    "homePage": "https://automationexercise.com/",
+    "authenticationPage": "https://automationexercise.com/login"
+  },
+  "errorMessages": {
+    "pages": {
+      "homePage": "Home Page is not opened",
+      "authenticationPage": "Authentication Page is not opened"
+    },
+    "elements": {
+      "homePageSlider": "Home Page slider is not appearing",
+      "loginForm": "Login Form is not appearing",
+      "signUpForm": "Sign up form is not appearing"
+    }
+  }
+}
