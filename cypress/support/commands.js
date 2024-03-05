@@ -24,3 +24,15 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 require("cypress-mochawesome-reporter/register");
+
+Cypress.Commands.add("getLength", (selector) => {
+  return cy.get(selector).then(($elements) => {
+    return $elements.length;
+  });
+});
+
+Cypress.Commands.add("getUrl", () => {
+  return cy.url().then((url) => {
+    return url;
+  });
+});
