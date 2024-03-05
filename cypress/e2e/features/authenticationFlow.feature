@@ -8,4 +8,5 @@ Feature: Authentication Feature
         Given User navigates to sign up page
         Then Verify signup page is visible successfully
         When  User fills the registration form with valid details and clicks signup
+        When User fills the sign up form on user details page
         Then  Verify user is registered successfully
