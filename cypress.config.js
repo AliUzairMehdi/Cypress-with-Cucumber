@@ -44,6 +44,12 @@ module.exports = defineConfig({
       config.specPattern = `cypress/e2e/features/${
         flowPaths[config.env.flowName]
       }.feature`;
+      on("task", {
+        log(message) {
+          console.log(message);
+          return null;
+        },
+      });
       config = dotenvPlugin(config);
       return config;
     },
