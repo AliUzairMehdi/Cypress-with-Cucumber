@@ -1,0 +1,18 @@
+module.exports = {
+  getTitleForMale: "#id_gender1",
+  getTitleForFemale: "#id_gender2",
+  getSignUpFormName: "#name",
+  getSignUpFormPassword: "#password",
+  getDayFromDateOfBirth: "#days",
+  getMonthFromDateOfBirth: "#months",
+  getYearFromDateOfBirth: "#years",
+  getSignUpFormFirstName: "#first_name",
+  getSignUpFormLastName: "#last_name",
+  getSignUpFormAddress: "#address1",
+  getSignUpFormCountry: "#country",
+  getSignUpFormState: "#state",
+  getSignUpFormCity: "#city",
+  getSignUpZipCode: "#zipcode",
+  getSignUpMobileNumber: "#mobile_number",
+  getCreateAccountButton: `[data-qa="create-account"]`,
+};
